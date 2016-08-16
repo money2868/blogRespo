@@ -10,7 +10,9 @@ require 'mina/git'
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :domain, 'root@192.168.1.108'
+set :term_mode, nil
+set :user, 'deploy'
+set :domain, '192.168.1.109'
 set :deploy_to, '/var/www/www.youzhi.com'
 set :repository, 'https://github.com/money2868/blogRespo.git'
 set :branch, 'master'
@@ -74,9 +76,9 @@ task :deploy => :environment do
     # instance of your project.
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
-    invoke :'bundle:install'
-    invoke :'rails:db_migrate'
-    invoke :'rails:assets_precompile'
+    #invoke :'bundle:install'
+    #invoke :'rails:db_migrate'
+    #invoke :'rails:assets_precompile'
     invoke :'deploy:cleanup'
 
     to :launch do
