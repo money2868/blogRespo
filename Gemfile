@@ -57,7 +57,8 @@ gem 'lesstile'
 gem 'formtastic'
 gem 'will_paginate', '= 3.0.pre2'
 group :development, :test do
-	gem 'cucumber-rails'
+	#gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
 	gem 'webrat'
 	gem 'factory_girl'
 	gem 'rspec'
