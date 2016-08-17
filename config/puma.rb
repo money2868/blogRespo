@@ -1,7 +1,8 @@
 #!/usr/bin/env puma
 
 #rails的运行环境
-environment 'production'
+#environment 'production'
+environment 'development'
 threads 2, 64
 workers 4
 
