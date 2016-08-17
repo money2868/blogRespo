@@ -56,7 +56,7 @@ gem 'ckeditor'
 gem 'lesstile'
 gem 'formtastic'
 #gem 'will_paginate', '= 3.0.pre2'
-gem 'will_paginate', '= 3.1.0'
+gem 'will_paginate', '~> 3.1'
 group :development, :test do
 	#gem 'cucumber-rails'
   gem 'cucumber-rails', :require => false
